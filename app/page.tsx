@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { heroImg, glow } from "./assets";
+import { heroImg, glow, farmer} from "./assets";
 import Navbar from "./components/layout/Navbar";
 import Button from "./components/ui/Button";
 
@@ -30,6 +30,9 @@ export default function Home() {
           <div className="texts flex flex-col gap-[16px]">
           <p className="text text-[24px] font-poppins">Who We Are</p>
           <p className="subTeext text-[16px] text-outline font-roboto">Foodbank is a platform designed to empower Nigerian farmers by providing visibility for their produce and connecting them with buyers nationwide. Our mission is to simplify agricultural trade, ensure secure deliveries, and offer flexible payment methods, making food distribution in Nigeria seamless and fair for everyone.</p>
+          </div>
+          <div className="images">
+            <Image src={farmer} alt="Farmer" />
           </div>
         </div>
       </div>
