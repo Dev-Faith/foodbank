@@ -3,11 +3,13 @@ import React, { useState, useEffect, useRef } from "react";
 import { RiMenu3Line } from "react-icons/ri";
 import { IoCloseOutline } from "react-icons/io5";
 import {gsap} from 'gsap';
+import { ScrollTrigger } from "gsap/all";
 import Link from "next/link";
 
 interface sideMenuProps {
   links: { label: string; url: string }[];
 }
+
 
 const SideMenu: React.FC<sideMenuProps> = ({ links }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -15,6 +17,8 @@ const SideMenu: React.FC<sideMenuProps> = ({ links }) => {
   const scrimRef = useRef<HTMLDivElement>(null);
   
   useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
     if (isOpen) {
      gsap.to(menuRef.current, {x:0, duration:0.5});
      gsap.to(scrimRef.current, {opacity:1, duration:0.5});
@@ -22,6 +26,9 @@ const SideMenu: React.FC<sideMenuProps> = ({ links }) => {
      gsap.to(menuRef.current, {x:"108%", duration:0.5});
       gsap.to(scrimRef.current, {opacity:0, duration:0.5});
     }
+
+    
+
   }, [isOpen]);
   return (
     <div className="relative w-full flex flex-col">

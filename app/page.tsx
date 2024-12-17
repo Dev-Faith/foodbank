@@ -63,7 +63,7 @@ export default function Home() {
   return (
     <div className="text-onBackground flex flex-col gap-[64px] overflow-hidden relative">
       <Navbar />
-      <div className="landingPage flex flex-col gap-[64px] p-[8px]">
+      <div className="landingPage flex flex-col gap-[64px] p-[8px] mt-[120px]">
         <Image src={glow} alt="Glow" className="absolute right-[-5rem] top-[-2rem] z-0" />
         <div className="hero flex flex-col gap-[32px]">
           <div className="heroTexts flex flex-col gap-[16px] overflow-hidden">
