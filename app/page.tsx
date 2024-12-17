@@ -146,7 +146,7 @@ export default function Home() {
         <div className="what-we-offer flex flex-col gap-[32px]">
           <p className="title text-[24px] text-onBackground font-poppins">What We Offer</p>
            <div className="offers flex flex-col gap-[16px]">
-           {whatWeOffer.map((offer) => <div className="flex flex-col gap-[32px] bg-surfaceContainerLow border-[1px] border-outlineVariant rounded-[20px] p-[10px]">
+           {whatWeOffer.map((offer, idx) => <div key={idx} className="flex flex-col gap-[32px] bg-surfaceContainerLow border-[1px] border-outlineVariant rounded-[20px] p-[10px]">
               <Image src={offer.img} alt={offer.title} width="119" height="152" className="self-center"/>
              <div className="texts flex flex-col gap-[8px]">
              <p className="title text-[16px] text-onBackground font-roboto">{offer.title}</p>

@@ -35,6 +35,7 @@ module.exports = {
         outlineVariant: themeJson.schemes.light.outlineVariant,
         error: themeJson.schemes.light.error,
         onError: themeJson.schemes.light.onError,
+        scrim: themeJson.schemes.light.scrim,
 
         // Dark mode colors (flattened with `dark-` prefix)
         'dark-primary': themeJson.schemes.dark.primary,
@@ -52,6 +53,7 @@ module.exports = {
         'dark-outlineVariant': themeJson.schemes.dark.outlineVariant,
         'dark-error': themeJson.schemes.dark.error,
         'dark-onError': themeJson.schemes.dark.onError,
+        'dark-scrim': themeJson.schemes.dark.scrim,
       },
       fontFamily: {
         poppins: ['var(--font-poppins)', 'sans-serif'], // Use the CSS variable

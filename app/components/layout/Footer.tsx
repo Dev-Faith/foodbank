@@ -77,7 +77,7 @@ const Footer = () => {
           © 2024 Foodbank. All rights reserved.
         </p>
       </div>
-      <Image src={glow} alt="glow" className="absolute top-[-5rem] right-[-4rem]" />
+      <Image src={glow} alt="glow" className="absolute size-[309px] top-[-5rem] right-[-4rem]" />
     </div>
   );
 };
