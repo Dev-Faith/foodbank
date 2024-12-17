@@ -61,9 +61,10 @@ export default function Home() {
   ]
 
   return (
-    <div className="text-onBackground flex flex-col gap-[64px] overflow-hidden">
+    <div className="text-onBackground flex flex-col gap-[64px] overflow-hidden relative">
       <Navbar />
       <div className="landingPage flex flex-col gap-[64px] p-[8px]">
+        <Image src={glow} alt="Glow" className="absolute right-[-5rem] top-[-2rem] z-0" />
         <div className="hero flex flex-col gap-[32px]">
           <div className="heroTexts flex flex-col gap-[16px] overflow-hidden">
             {/* <Image src={glow} alt="Glow" className="absolute right-[-3rem] top-[-2rem] z-0" /> */}
@@ -120,7 +121,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-        <div className="how-foodbank-works flex flex-col gap-[32px]">
+        <div className="how-foodbank-works flex flex-col gap-[32px] text-[24px] font-poppins">
           <p className="heading text-[24px] text-onBackground">How Foodbank Works</p>
           <div className="lists flex flex-col gap-[16px]">
             {howItWorks.map((list, idx) => (
@@ -131,7 +132,7 @@ export default function Home() {
                 </div>
                 <div className="texts w-[87%]">
                   <p className="title text-[16px] text-onBackground">{list.title}</p>
-                  <p className="title text-[16px] text-outline">{list.desc}</p>
+                  <p className="title text-[16px] text-outline font-roboto">{list.desc}</p>
                 </div>
                 </div>
                 <div className="divider h-[1px] w-full bg-outlineVariant"></div>

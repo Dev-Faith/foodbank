@@ -3,6 +3,8 @@ import React from "react";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import { LuFacebook } from "react-icons/lu";
 import { RiTwitterXFill } from "react-icons/ri";
+import { glow } from "@/app/assets";
+import Image from "next/image";
 
 const Footer = () => {
   const links = [
@@ -30,7 +32,7 @@ const Footer = () => {
   ];
 
   return (
-    <div className="bg-surfaceContainer pt-[24px] flex flex-col">
+    <div className="bg-surfaceContainer pt-[24px] flex flex-col relative">
       <div className="mainContent flex flex-col gap-[32px] pb-[64px] border-b-[1px] border-outlineVariant">
         <ul className="links flex flex-col gap-[16px] px-[8px]">
           {links.map((link) => (
@@ -75,6 +77,7 @@ const Footer = () => {
           © 2024 Foodbank. All rights reserved.
         </p>
       </div>
+      <Image src={glow} alt="glow" className="absolute top-[-5rem] right-[-4rem]" />
     </div>
   );
 };
