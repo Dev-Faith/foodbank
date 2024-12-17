@@ -1,9 +1,21 @@
 import Image from "next/image";
-import { heroImg, glow, farmer, driver, ladySup, FarmerIll, paymentIll, delivery, nigeriaMap } from "./assets";
+import {
+  heroImg,
+  glow,
+  farmer,
+  driver,
+  ladySup,
+  FarmerIll,
+  paymentIll,
+  delivery,
+  nigeriaMap,
+  grid,
+} from "./assets";
 import Navbar from "./components/layout/Navbar";
 import Button from "./components/ui/Button";
 import { MdOutlineArrowOutward } from "react-icons/md";
 import Footer from "./components/layout/Footer";
+import React from "react";
 export default function Home() {
   const imageLinks = [
     {
@@ -40,67 +52,81 @@ export default function Home() {
   const whatWeOffer = [
     {
       img: FarmerIll,
-      title:"Seamless Farmer-Buyer Connection",
-      desc: "Bridging the gap between local farmers and urban buyers with a user-friendly interface."
+      title: "Seamless Farmer-Buyer Connection",
+      desc: "Bridging the gap between local farmers and urban buyers with a user-friendly interface.",
     },
     {
       img: paymentIll,
-      title:"Flexible Payments",
-      desc: "Options include online payments via Flutterwave or Remita, barter trading, or cash on delivery."
+      title: "Flexible Payments",
+      desc: "Options include online payments via Flutterwave or Remita, barter trading, or cash on delivery.",
     },
     {
       img: delivery,
-      title:"Trusted Logistics",
-      desc: "Drivers and vehicles are verified to ensure safe and secure delivery of goods."
+      title: "Trusted Logistics",
+      desc: "Drivers and vehicles are verified to ensure safe and secure delivery of goods.",
     },
     {
       img: nigeriaMap,
-      title:"Nationwide Reach",
-      desc: "Access agricultural produce from any region in Nigeria."
+      title: "Nationwide Reach",
+      desc: "Access agricultural produce from any region in Nigeria.",
     },
-  ]
+  ];
 
   return (
     <div className="text-onBackground flex flex-col gap-[64px] overflow-hidden relative">
       <Navbar />
-      <div className="landingPage flex flex-col gap-[64px] p-[8px] mt-[120px]">
-        <Image src={glow} alt="Glow" className="absolute right-[-5rem] top-[-2rem] z-0" />
-        <div className="hero flex flex-col gap-[32px]">
+      <div className="relative landingPage flex flex-col gap-[64px] lg:gap-[128px] p-[8px] lg:px-[64px] lg:mt-[200px] mt-[120px]">
+        <Image
+          src={grid}
+          alt="Glow"
+          className="left-0 top-[-20rem] fixed inset-0 z-0 opacity-[.23] h-[200vh] w-[100vw] bg-[radial-gradient(circle, rgba(255,255,255,0) 50%, rgba(255,255,255,1) 100%)]"
+        />
+        <div className="hero flex flex-col lg:grid lg:justify-items-center lg:grid-cols-2 lg:justify-between  gap-[32px]">
           <div className="heroTexts flex flex-col gap-[16px] overflow-hidden">
             {/* <Image src={glow} alt="Glow" className="absolute right-[-3rem] top-[-2rem] z-0" /> */}
-            <p className="text-[24px] font-poppins">
+            <p className="text-[24px] lg:text-[32px] font-poppins">
               Connecting Farmers, Buyers, and Drivers Across Nigeria
             </p>
-            <p className="text-[16px] text-outline font-roboto">
+            <p className="text-[16px] text-outline font-roboto lg:font-poppins lg:text-[24px]">
               Revolutionizing agriculture and trade by making produce
               accessible, transportation reliable, and payments versatile.
             </p>
           </div>
-          <div className="CTAs grid grid-cols-2 gap-x-[8px] gap-y-[16px] w-[323px] text-[14px] font-roboto">
+          <div className="CTAs grid grid-cols-2 lg:justify-self-start lg:flex lg:w-[600px] items-center justify-between gap-x-[8px] gap-y-[16px] w-[323px] text-[14px] lg:text-[18px] font-roboto">
             <Button label="Start Buying Now" />
             <Button label="Join As a Farmer" variant="outline" />
             <Button label="Become a Driver" variant="text" />
           </div>
-          <Image src={heroImg} alt="Hero Image" className="" />
+          <Image src={glow} alt="glow" className="absolute size-[600px] top-[-10rem] right-[-4rem] z-0" />
+          <Image
+            src={heroImg}
+            alt="Hero Image"
+            className="lg:w-[500px] col-start-2 row-start-1 row-span-2 lg:justify-self-end"
+          />
         </div>
-        <div className="who-we-are flex flex-col gap-[32px]">
-          <div className="texts flex flex-col gap-[16px]">
-            <p className="text text-[24px] font-poppins">Who We Are</p>
-            <p className="subTeext text-[16px] text-outline font-roboto">
-              Foodbank is a platform designed to empower Nigerian farmers by
-              providing visibility for their produce and connecting them with
-              buyers nationwide. Our mission is to simplify agricultural trade,
-              ensure secure deliveries, and offer flexible payment methods,
-              making food distribution in Nigeria seamless and fair for
-              everyone.
+        <div className="who-we-are flex flex-col gap-[32px] lg:gap-[64px]">
+          <div className="texts flex flex-col gap-[16px] lg:gap-[28px] lg:w-[844px] lg:self-center">
+            <p className="text text-[24px] lg:text-[36px] lg:text-center font-poppins">
+              Who We Are
+            </p>
+            <p className="subText text-[16px] lg:text-[24px] lg:font-poppins text-outline font-roboto lg:text-center">
+              <span className="text-primary">Foodbank</span> is a platform
+              designed to empower Nigerian farmers by providing visibility for
+              their produce and connecting them with
+              <span className="text-primary"> Buyers</span> nationwide. Our
+              mission is to simplify agricultural trade, ensure secure{" "}
+              <span className="text-primary">deliveries</span>, and offer
+              flexible payment methods, making food distribution in Nigeria
+              seamless and fair for everyone.
             </p>
           </div>
-          <div className="images grid grid-cols-2 gap-[20px]">
+          <div className="images grid grid-cols-2 lg:grid-cols-3 gap-[20px]">
             {imageLinks.map((linkImage, idx) => (
               <div
                 key={idx}
                 className={` relative ${
-                  linkImage.label === "Buyers" && "col-span-2"
+                  linkImage.label === "Buyers" &&
+                  "col-span-2 lg:rounded-[50px] lg:col-span-1"
                 }`}
               >
                 <Image
@@ -108,12 +134,12 @@ export default function Home() {
                   key={linkImage.label}
                   alt={linkImage.label}
                 />
-                <MdOutlineArrowOutward className="absolute top-[10px] right-[10px] text-onPrimary" />
-                <div className="texts absolute bottom-[10px] w-[140px] left-[12px] text-onPrimary">
-                  <p className="label text-[14px] font-roboto">
+                <MdOutlineArrowOutward className="absolute top-[10px] right-[10px] lg:size-[33px] lg:top-[20px] lg:right-[15px]  text-onPrimary" />
+                <div className="texts absolute bottom-[10px] lg:bottom-[20px] w-[140px] lg:w-[300px] left-[12px] lg:left-[24px] text-onPrimary">
+                  <p className="label text-[14px] lg:text-[28px] font-roboto">
                     {linkImage.label}
                   </p>
-                  <p className="desc text-[11px] font-roboto">
+                  <p className="desc text-[11px] lg:text-[16px] font-roboto">
                     {linkImage.desc}
                   </p>
                 </div>
@@ -121,51 +147,85 @@ export default function Home() {
             ))}
           </div>
         </div>
-        <div className="how-foodbank-works flex flex-col gap-[32px] text-[24px] font-poppins">
-          <p className="heading text-[24px] text-onBackground">How Foodbank Works</p>
-          <div className="lists flex flex-col gap-[16px]">
+        <div className="how-foodbank-works flex flex-col gap-[32px] lg:gap-[64px] text-[24px] font-poppins items-center">
+          <p className="heading text-[24px] text-onBackground lg:text-[36px] lg:text-center">
+            How Foodbank Works
+          </p>
+          <div className="lists flex flex-col gap-[16px] lg:w-[741px]">
             {howItWorks.map((list, idx) => (
-              <div key={idx} className="w-full flex flex-col gap-[16px]">
+              <div
+                key={idx}
+                className="w-full flex flex-col gap-[16px] border-b-[1px] p-[16px] border-outlineVariant"
+              >
                 <div className="top flex justify-between w-full">
-                <div className="number size-[30px] rounded-full bg-surfaceContainer flex items-center justify-center text-[16px]">
-                  <p>{list.id}</p>
+                  <div className="number size-[30px] lg:size-[40px]  rounded-full bg-surfaceContainer flex items-center justify-center text-[16px] lg:text-[28px]">
+                    <p>{list.id}</p>
+                  </div>
+                  <div className="texts w-[87%] flex flex-col gap-[16px]">
+                    <p className="title text-[16px] lg:text-[28px] text-onBackground">
+                      {list.title}
+                    </p>
+                    <p className="title text-[16px] lg:text-[24px] text-outline font-roboto">
+                      {list.desc}
+                    </p>
+                  </div>
                 </div>
-                <div className="texts w-[87%]">
-                  <p className="title text-[16px] text-onBackground">{list.title}</p>
-                  <p className="title text-[16px] text-outline font-roboto">{list.desc}</p>
-                </div>
-                </div>
-                <div className="divider h-[1px] w-full bg-outlineVariant"></div>
+                {/* <div className="divider h-[1px] w-full bg-outlineVariant"></div> */}
               </div>
             ))}
           </div>
-          <div className="callout bg-tertiary text-onPrimary rounded-[20px] p-[10px] text-[16px] font-roboto"> 
-            <p>Every transaction is secured, and our logistics ensure smooth delivery.</p>
+          <div className="callout bg-tertiary text-onPrimary rounded-[20px] p-[10px] text-[16px] lg:text-[24px] lg:text-center font-roboto lg:w-[741px] ">
+            <p>
+              Every transaction is secured, and our logistics ensure smooth
+              delivery.
+            </p>
           </div>
         </div>
-        <div className="what-we-offer flex flex-col gap-[32px]">
-          <p className="title text-[24px] text-onBackground font-poppins">What We Offer</p>
-           <div className="offers flex flex-col gap-[16px]">
-           {whatWeOffer.map((offer, idx) => <div key={idx} className="flex flex-col gap-[32px] bg-surfaceContainerLow border-[1px] border-outlineVariant rounded-[20px] p-[10px]">
-              <Image src={offer.img} alt={offer.title} width="119" height="152" className="self-center"/>
-             <div className="texts flex flex-col gap-[8px]">
-             <p className="title text-[16px] text-onBackground font-roboto">{offer.title}</p>
-             <p className="desc text-[14px] text-outline font-roboto">{offer.desc}</p>
-             </div>
-            </div>)}
-           </div>
+        <div className="what-we-offer flex flex-col gap-[32px] lg:gap-[64px]">
+          <p className="title text-[24px] lg:text-[36px] lg:text-center text-onBackground font-poppins">
+            What We Offer
+          </p>
+          <div className="offers flex flex-col gap-[16px] lg:grid lg:grid-cols-2">
+            {whatWeOffer.map((offer, idx) => (
+              <div
+                key={idx}
+                className="flex flex-col lg:px-[16px] lg:py-[10px] gap-[32px] bg-surfaceContainerLow border-[1px] border-outlineVariant rounded-[20px] p-[10px] lg:h-[360px] lg:gap-0 lg:justify-between"
+              >
+                <Image
+                  src={offer.img}
+                  alt={offer.title}
+                  width="119"
+                  height="152"
+                  className="self-center lg:w-[200px] lg:h-[144px] object-fill"
+                />
+                <div className="texts flex flex-col gap-[8px]">
+                  <p className="title text-[16px] text-onBackground font-roboto lg:text-[28px]">
+                    {offer.title}
+                  </p>
+                  <p className="desc text-[14px] text-outline font-roboto lg:text-[24px]">
+                    {offer.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
-        <div className="ready-to-join flex flex-col gap-[32px]">
-          <p className="text-onBackground text-[24px] font-poppins">Ready to Join the Foodbank Community?</p>
-          <p className="desc text-outline text-[16px] font-roboto">Whether you’re a farmer, buyer, or driver, Foodbank is here to simplify your journey.</p>
-          <div className="buttons grid grid-cols-2 gap-[8px] text-[14px]">
+        <div className="ready-to-join flex flex-col gap-[32px] lg:items-center">
+          <p className="text-onBackground text-[24px] font-poppins lg:text-center lg:text-[36px] lg:w-[578px]">
+            Ready to Join the Foodbank Community?
+          </p>
+          <p className="desc text-outline text-[16px] font-roboto lg:text-[24px] lg:w-[578px] lg:text-center">
+            Whether you’re a farmer, buyer, or driver, Foodbank is here to
+            simplify your journey.
+          </p>
+          <div className="buttons grid grid-cols-2 lg:grid-cols-3 lg:items-center gap-[8px] text-[14px]">
             <Button label="Start Buying Now" />
             <Button label="Join As a Farmer" variant="outline" />
             <Button label="Become a Driver" variant="text" />
           </div>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 }

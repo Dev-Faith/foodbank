@@ -31,7 +31,7 @@ const SideMenu: React.FC<sideMenuProps> = ({ links }) => {
 
   }, [isOpen]);
   return (
-    <div className="relative w-full flex flex-col">
+    <div className="relative w-full flex flex-col md:hidden">
       <div ref={scrimRef} className="scrim fixed inset-0 bg-scrim flex items-center justify-center z-40 bg-opacity-20"></div>
       {isOpen ? (
         <IoCloseOutline
@@ -46,7 +46,7 @@ const SideMenu: React.FC<sideMenuProps> = ({ links }) => {
           onClick={() => setIsOpen((prev) => !prev)}
         />
       )}
-      <div ref = {menuRef} className="menuContent absolute top-[3rem] right-[0rem] z-50 bg-background rounded-[20px] p-[24px] w-full ">
+      <div ref = {menuRef} className="menuContent absolute top-[3rem] translate-x-[108%] right-[0rem] z-50 bg-background rounded-[20px] p-[24px] w-full ">
         <ul className="flex flex-col gap-[40px]">
           {links.map((link) => (
            <Link href = {link.url} key = {link.label}> <li key={link.label}>{link.label}</li></Link>

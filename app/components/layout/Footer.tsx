@@ -32,33 +32,33 @@ const Footer = () => {
   ];
 
   return (
-    <div className="bg-surfaceContainer pt-[24px] flex flex-col relative">
-      <div className="mainContent flex flex-col gap-[32px] pb-[64px] border-b-[1px] border-outlineVariant">
-        <ul className="links flex flex-col gap-[16px] px-[8px]">
+    <div className="bg-surfaceContainer pt-[24px] flex flex-col relative lg:items-center lg:justify-center">
+      <div className="mainContent flex flex-col gap-[32px] pb-[64px] border-b-[1px] border-outlineVariant lg:items-center lg:w-full lg:py-[128px]">
+        <ul className="links flex flex-col lg:flex-row lg:text-center gap-[16px] px-[8px]">
           {links.map((link) => (
             <Link href={link.url} key={link.label}>
               <li
                 key={link.label}
-                className="font-roboto text-[16px] text-onSurface"
+                className="font-roboto text-[16px] text-onSurface lg:text-primary lg:underline lg:text-[24px]"
               >
                 {link.label}
               </li>
             </Link>
           ))}
         </ul>
-        <div className="contacts px-[8px]">
+        <div className="contacts px-[8px] lg:flex gap-[32px]">
           {contacts.map((contact) => (
             <div key={contact.label} className="flex gap-[8px]">
               <p className="font-roboto text-[16px] text-onSurface">
                 {contact.label}:
               </p>
-              <p className="font-roboto text-[16px] text-onSurface">
+              <p className="font-roboto text-[16px] text-outline">
                 {contact.value}
               </p>
             </div>
           ))}
         </div>
-        <div className="socials px-[8px] font-roboto text-[16px] text-onSurface flex flex-col gap-[16px]">
+        <div className="socials px-[8px] font-roboto text-[16px] text-onSurface flex flex-col gap-[16px] lg:text-center lg:items-center">
           <p>
             Follow us on Facebook, Instagram, and Twitter for the latest
             updates.

@@ -14,7 +14,7 @@ const Button: React.FC<ButtonProps> = ({
   disabled = false,
 }) => {
   const baseStyle =
-    'px-[24px] py-[10px] rounded-[20px] font-medium transition-all duration-200 focus:outline-none';
+    'px-[24px] py-[10px] rounded-[20px] cursor-pointer font-medium transition-all duration-200 focus:outline-none';
   const variants = {
     fill: 'bg-primary text-onPrimary hover:bg-primaryContainer',
     outline: 'border-[1px] border-primary text-primary',
