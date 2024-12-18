@@ -76,20 +76,27 @@ export default function Home() {
     <div className="text-onBackground flex flex-col gap-[64px] overflow-hidden relative">
       <Navbar />
       <div className="relative landingPage flex flex-col gap-[64px] lg:gap-[128px] p-[8px] lg:px-[64px] lg:mt-[200px] mt-[120px]">
-        <Image
-          src={grid}
-          alt="Glow"
-          className="left-0 top-[-20rem] fixed inset-0 z-0 opacity-[.23] h-[200vh] w-[100vw] bg-[radial-gradient(circle, rgba(255,255,255,0) 50%, rgba(255,255,255,1) 100%)]"
-        />
         <div className=" relative hero flex flex-col lg:grid lg:justify-items-center lg:grid-cols-2 lg:justify-between  gap-[32px]">
-          <div className="heroTexts flex flex-col gap-[16px] overflow-hidden">
-            {/* <Image src={glow} alt="Glow" className="absolute right-[-3rem] top-[-2rem] z-0" /> */}
+          {/* <Image
+            src={grid}
+            alt="Glow"
+            className="left-0 top-0 absolute inset-0 z-0 opacity-[.23] h-full w-full object-cover"
+          /> */}
+          <Image
+            src={grid}
+            alt="Glow"
+            className="lg:left-[-25rem] top-[-10rem]   lg:top-0 absolute inset-0 z-0 opacity-[.23] h-full w-full object-cover"
+          />
+          <div className="relative heroTexts flex flex-col gap-[16px] overflow-hidden">
             <p className="text-[24px] lg:text-[32px] font-poppins">
               Connecting Farmers, Buyers, and Drivers Across Nigeria
             </p>
             <p className="text-[16px] text-outline font-roboto lg:font-poppins lg:text-[24px]">
-              Revolutionizing agriculture and <span className="text-primary"> trade</span> by making produce
-              accessible, <span className="text-primary"> transportation</span> reliable, and <span className="text-primary"> payments</span> versatile.
+              Revolutionizing agriculture and{" "}
+              <span className="text-primary"> trade</span> by making produce
+              accessible, <span className="text-primary"> transportation</span>{" "}
+              reliable, and <span className="text-primary"> payments</span>{" "}
+              versatile.
             </p>
           </div>
           <div className="CTAs grid grid-cols-2 lg:justify-self-start lg:flex lg:w-[600px] items-center justify-between gap-x-[8px] gap-y-[16px] w-[323px] text-[14px] lg:text-[18px] font-roboto">
@@ -97,21 +104,38 @@ export default function Home() {
             <Button label="Join As a Farmer" variant="outline" />
             <Button label="Become a Driver" variant="text" />
           </div>
-          <Image src={glow} alt="glow" className="absolute size-[600px] top-[-30rem] right-[-4rem] z-0 " />
+          <Image
+            src={glow}
+            alt="glow"
+            className="absolute size-[600px] top-[-30rem] right-[-4rem] z-0 "
+          />
           <Image
             src={heroImg}
             alt="Hero Image"
             className="lg:w-[500px] col-start-2 row-start-1 row-span-2 lg:justify-self-end"
           />
-          <Image src={glow} alt="glow" className="absolute size-[600px] bottom-[0rem] left-[-10rem] z-0  hidden lg:flex" />
-          <Image src={glow} alt="glow" className="absolute size-[600px] bottom-[-30rem] left-[15rem] z-0 hidden lg:flex" />
+          <Image
+            src={glow}
+            alt="glow"
+            className="absolute size-[600px] bottom-[0rem] left-[-10rem] z-0  hidden lg:flex"
+          />
+          <Image
+            src={glow}
+            alt="glow"
+            className="absolute size-[600px] bottom-[-30rem] left-[15rem] z-0 hidden lg:flex"
+          />
         </div>
-        <div className="who-we-are flex flex-col gap-[32px] lg:gap-[64px]">
-          <div className="texts flex flex-col gap-[16px] lg:gap-[28px] lg:w-[844px] lg:self-center">
+        <div className=" relative who-we-are flex flex-col gap-[32px] lg:gap-[64px]">
+          <Image
+            src={grid}
+            alt="Glow"
+            className="left-0 top-[-11rem] lg:top-[-8rem] absolute inset-0 z-0 opacity-[.23] h-full w-full object-cover"
+          />
+          <div className=" texts flex flex-col gap-[16px] lg:gap-[28px] lg:w-[844px] lg:self-center">
             <p className="text text-[24px] lg:text-[36px] lg:text-center font-poppins">
               Who We Are
             </p>
-            <p className="subText text-[16px] lg:text-[24px] lg:font-poppins text-outline font-roboto lg:text-center">
+            <p className=" subText text-[16px] lg:text-[24px] lg:font-poppins text-outline font-roboto lg:text-center">
               <span className="text-primary">Foodbank</span> is a platform
               designed to empower Nigerian farmers by providing visibility for
               their produce and connecting them with
@@ -149,7 +173,12 @@ export default function Home() {
             ))}
           </div>
         </div>
-        <div className="how-foodbank-works flex flex-col gap-[32px] lg:gap-[64px] text-[24px] font-poppins items-center">
+        <div className="how-foodbank-works relative flex flex-col gap-[32px] lg:gap-[64px] text-[24px] font-poppins items-center">
+          <Image
+            src={grid}
+            alt="Glow"
+            className="left-0 top-0 absolute inset-0 z-0 opacity-[.23] h-full w-full object-cover"
+          />
           <p className="heading text-[24px] text-onBackground lg:text-[36px] lg:text-center">
             How Foodbank Works
           </p>
@@ -212,7 +241,12 @@ export default function Home() {
             ))}
           </div>
         </div>
-        <div className="ready-to-join flex flex-col gap-[32px] lg:items-center">
+        <div className="ready-to-join flex flex-col gap-[32px] lg:items-center relative">
+          <Image
+            src={grid}
+            alt="Glow"
+            className="left-0 top-0 absolute inset-0 z-0 opacity-[.23] h-full w-full object-cover"
+          />
           <p className="text-onBackground text-[24px] font-poppins lg:text-center lg:text-[36px] lg:w-[578px]">
             Ready to Join the Foodbank Community?
           </p>

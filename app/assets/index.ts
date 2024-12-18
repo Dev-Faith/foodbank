@@ -7,7 +7,7 @@ import FarmerIll from "./famerIll.png";
 import delivery from "./delivery.png";
 import nigeriaMap from "./nigeriaMap.png";
 import paymentIll from "./paymentIll.png";
-import grid from "./gradientGrid.png";
+import grid from "./lightGrid.png";
 
 export {
   heroImg,
