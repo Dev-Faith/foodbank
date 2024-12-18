@@ -142,7 +142,7 @@ export default function Home() {
               <span className="text-primary"> Buyers</span> nationwide. Our
               mission is to simplify agricultural trade, ensure secure{" "}
               <span className="text-primary">deliveries</span>, and offer
-              flexible payment methods, making food distribution in Nigeria
+              flexible payment methods, making  <span className="text-primary">food</span> and even  <span className="text-primary">drug</span> distribution in Nigeria
               seamless and fair for everyone.
             </p>
           </div>
