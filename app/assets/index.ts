@@ -8,6 +8,9 @@ import delivery from "./delivery.png";
 import nigeriaMap from "./nigeriaMap.png";
 import paymentIll from "./paymentIll.png";
 import grid from "./lightGrid.png";
+import aboutUs from "./foodbankImg.jpg";
+import firstGreen from "./Group 32.png";
+import secondGreen from "./greenHarb.png";
 
 export {
   heroImg,
@@ -20,4 +23,7 @@ export {
   delivery,
   paymentIll,
   grid,
+  aboutUs,
+  firstGreen,
+  secondGreen,
 };
