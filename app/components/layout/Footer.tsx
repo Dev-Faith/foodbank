@@ -8,7 +8,7 @@ import Image from "next/image";
 
 const Footer = () => {
   const links = [
-    { label: "About Us", url: "/#" },
+    { label: "About Us", url: "/#about-us" },
     { label: "Contact Us", url: "/#" },
     { label: "FAQs", url: "/faqs" },
     { label: "Privacy Policy", url: "/#" },
@@ -32,7 +32,7 @@ const Footer = () => {
   ];
 
   return (
-    <div className="bg-surfaceContainer pt-[24px] flex flex-col relative lg:items-center lg:justify-center">
+    <footer className="bg-surfaceContainer pt-[24px] flex flex-col relative lg:items-center lg:justify-center">
       <div className="mainContent flex flex-col gap-[32px] pb-[64px] border-b-[1px] border-outlineVariant lg:items-center lg:w-full lg:py-[128px]">
         <ul className="links flex flex-col lg:flex-row lg:text-center gap-[16px] px-[8px]">
           {links.map((link) => (
@@ -79,7 +79,7 @@ const Footer = () => {
       </div>
       <Image src={glow} alt="glow" className="absolute size-[500px] top-[-5rem] lg:top-[10rem] right-[-4rem]" />
       <Image src={glow} alt="glow" className="absolute size-[500px] top-[-5rem] lg:top-[10rem] right-[-4rem]  hidden lg:flex" />
-    </div>
+    </footer>
   );
 };
 

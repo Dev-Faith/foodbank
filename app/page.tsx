@@ -75,7 +75,7 @@ export default function Home() {
   return (
     <div className="text-onBackground flex flex-col gap-[64px] overflow-hidden relative">
       <Navbar />
-      <div className="relative landingPage flex flex-col gap-[64px] lg:gap-[128px] p-[8px] lg:px-[64px] lg:mt-[200px] mt-[120px]">
+      <div className="relative landingPage flex flex-col gap-[64px] lg:gap-[128px] p-[8px] lg:px-[64px] lg:mt-[150px] mt-[120px]">
         <div className=" relative hero flex flex-col lg:grid lg:justify-items-center lg:grid-cols-2 lg:justify-between  gap-[32px]">
           {/* <Image
             src={grid}
