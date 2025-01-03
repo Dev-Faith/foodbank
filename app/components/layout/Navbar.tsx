@@ -7,12 +7,15 @@ import { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const navRef = useRef<HTMLDivElement>(null);
 
+  const path = usePathname();
+
   const links = [
-    { label: "About Us", url: "./pages/aboutUs" },
+    { label: "About Us", url: "/pages/aboutUs" },
     { label: "Contact Us", url: "/#" },
     { label: "FAQs", url: "/#" },
     { label: "Privacy Policy", url: "/#" },
@@ -37,7 +40,7 @@ const Navbar = () => {
             link.label !== "Privacy Policy" &&
             link.label !== "Terms & Conditions" && (
               <Link key={idx} href={link.url}>
-                <li className="font-roboto text-[16px]">{link.label}</li>
+                <li className={`font-roboto text-[16px] ${path==link.url && "text-primary font-bold"}`}>{link.label}</li>
               </Link>
             )
         )}

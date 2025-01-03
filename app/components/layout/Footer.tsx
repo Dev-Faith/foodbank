@@ -8,7 +8,7 @@ import Image from "next/image";
 
 const Footer = () => {
   const links = [
-    { label: "About Us", url: "/#about-us" },
+    { label: "About Us", url: "/pages/aboutUs" },
     { label: "Contact Us", url: "/#" },
     { label: "FAQs", url: "/faqs" },
     { label: "Privacy Policy", url: "/#" },

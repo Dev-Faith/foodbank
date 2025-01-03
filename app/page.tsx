@@ -257,7 +257,7 @@ export default function Home() {
           <div className="buttons grid grid-cols-2 lg:grid-cols-3 lg:items-center gap-[8px] text-[14px]">
             <Button label="Start Buying Now" />
             <Button label="Join As a Farmer" variant="outline" />
-            <Button label="Become a Driver" variant="text" />
+            <Button label="Become a Driver" variant="text"/>
           </div>
         </div>
       </div>
