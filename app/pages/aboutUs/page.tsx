@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "@/app/components/layout/Navbar";
 import Footer from "@/app/components/layout/Footer";
 import Image from "next/image";
-import { aboutUs, firstGreen } from "@/app/assets";
+import { aboutUs, firstGreen, secondGreen } from "@/app/assets";
 
 const Page = () => {
   return (
@@ -11,7 +11,7 @@ const Page = () => {
       <div className="flex-grow">
         <div className="welcome flex items-center gap-[64px] p-[8px] lg:px-[64px] lg:mt-[150px] mt-[120px]">
           <div className="texts flex flex-col gap-[16px]">
-            <p className="font-poppins text-[32px] text-onBackground">
+            <p className="font-poppins text-[32px] text-onBackground font-bold">
               Welcome to Foodbank
             </p>
             <p className="font-roboto text-outline text-[24px]">
@@ -26,12 +26,12 @@ const Page = () => {
               collaboration.
             </p>
           </div>
-          <Image src={aboutUs} alt="strategy" className="rounded-[20px]" />
+          <Image src={aboutUs} alt="strategy" className="rounded-[20px] w-[100vw]" />
         </div>
         <div className="ourMission relative flex flex-col">
-          <Image src={firstGreen} alt="greenBg"  className="relative top-[-200px]"/>
+          <Image src={firstGreen} alt="greenBg"  className="relative top-[-400px] w-screen"/>
           <div className="absolute texts text-center w-[582px] self-center top-[128px] flex flex-col gap-[24px] "> 
-            <p className="font-poppins text-[32px]">Our Mission</p>
+            <p className="font-poppins text-[32px] text-onBackground font-bold">Our Mission</p>
             <p className="font-roboto text-outline text-[24px]">
               To revolutionize access to food and essential services in Africa
               through innovation, collaboration, and sustainable practices,
@@ -40,9 +40,9 @@ const Page = () => {
           </div>
         </div>
         <div className="ourVision relative flex flex-col">
-          <Image src={firstGreen} alt="greenBg"  className="relative top-[-200px]"/>
-          <div className="absolute texts text-center w-[582px] self-center top-[128px] flex flex-col gap-[24px] "> 
-            <p className="font-poppins text-[32px]">Our Mission</p>
+          <Image src={secondGreen} alt="greenBg"  className="relative top-[-700px] w-screen"/>
+          <div className="absolute texts text-center w-[582px] self-center top-[-600px] flex flex-col gap-[24px]"> 
+            <p className="font-poppins text-[32px] text-onBackground font-bold">Our Mission</p>
             <p className="font-roboto text-outline text-[24px]">
               To revolutionize access to food and essential services in Africa
               through innovation, collaboration, and sustainable practices,
