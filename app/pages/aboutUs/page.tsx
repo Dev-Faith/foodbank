@@ -4,6 +4,7 @@ import Footer from "@/app/components/layout/Footer";
 import Image from "next/image";
 import { aboutUs, firstGreen, grid, secondGreen } from "@/app/assets";
 import Button from "@/app/components/ui/Button";
+import { TiTick } from "react-icons/ti";
 
 const Page = () => {
   const whyChooseUs = [
@@ -70,12 +71,12 @@ const Page = () => {
     <div className="min-h-screen flex flex-col overflow-hidden">
       <Navbar />
       <div className="flex-grow">
-        <div className="welcome flex items-center gap-[64px] p-[8px] lg:px-[64px] lg:mt-[150px] mt-[120px]">
+        <div className="welcome flex lg:flex-row flex-col items-center gap-[64px] p-[8px] lg:px-[64px] lg:mt-[150px] mt-[120px]">
           <div className="texts flex flex-col gap-[16px]">
-            <p className="font-poppins text-[32px] text-onBackground font-bold">
+            <p className="font-poppins text-[24px] lg:text-[32px] text-onBackground">
               Welcome to Foodbank
             </p>
-            <p className="font-roboto text-outline text-[24px]">
+            <p className="font-roboto text-outline text-[16px] lg:text-[24px]">
               your trusted partner in revolutionizing food access and economic
               empowerment across Africa. At Foodbank, we are committed to
               addressing food insecurity and fostering sustainable solutions
@@ -97,33 +98,33 @@ const Page = () => {
           <Image
             src={firstGreen}
             alt="greenBg"
-            className="relative top-[-300px] w-screen"
+            className="relative top-[100px] lg:top-[-300px] w-screen"
           />
-          <div className="absolute texts text-center w-[582px] self-center top-[128px] flex flex-col gap-[24px] ">
-            <p className="font-poppins text-[32px]">Our Mission</p>
-            <p className="font-roboto text-outline text-[24px]">
+          <div className="absolute texts lg:text-center px-[8px] lg:w-[582px] lg:self-center lg:top-[128px] top-[85px] flex flex-col gap-[16px] lg:gap-[24px] ">
+            <p className="font-poppins text-[24px] lg:text-[32px]">Our Mission</p>
+            <p className="font-roboto text-outline text-[16px]  lg:text-[24px]">
               To revolutionize access to food and essential services in Africa
               through innovation, collaboration, and sustainable practices,
               fostering economic empowerment and food security for all.
             </p>
           </div>
         </div>
-        <div className="ourVision relative flex flex-col top-[-300px]">
+        <div className="ourVision relative flex flex-col top-[400px] lg:top-[-300px]">
           <Image
             src={secondGreen}
             alt="greenBg"
-            className="relative top-[-200px] w-screen"
+            className="relative top-[-250px] lg:top-[-200px] w-screen"
           />
-          <div className="absolute texts text-center w-[582px] self-center top-[-128px] flex flex-col gap-[24px] ">
-            <p className="font-poppins text-[32px]">Our Vision</p>
-            <p className="font-roboto text-outline text-[24px]">
+          <div className="absolute texts lg:text-center lg:w-[582px] px-[8px] lg:self-center lg:top-[-128px] top-[-300px] flex flex-col gap-[16px] lg:gap-[24px] ">
+            <p className="font-poppins text-[24px] lg:text-[32px]">Our Vision</p>
+            <p className="font-roboto text-outline text-[16px]  lg:text-[24px]">
               To be the leading platform in Africa for food banking, trade
               facilitation, and financial inclusion, transforming lives and
               creating resilient communities.
             </p>
           </div>
         </div>
-        <div className="why-choose-us top-[-500px]  relative flex flex-col gap-[32px] lg:gap-[64px] text-[24px] font-poppins items-center">
+        <div className="why-choose-us top-[200px] lg:top-[-500px]  relative flex flex-col gap-[32px] lg:gap-[64px] text-[24px] font-poppins items-center">
           <Image
             src={grid}
             alt="Glow"
@@ -140,7 +141,7 @@ const Page = () => {
               >
                 <div className="top flex justify-between w-full">
                   <div className="number size-[30px] lg:size-[40px]  rounded-full bg-surfaceContainer flex items-center justify-center text-[16px] lg:text-[28px]">
-                    <p>{list.id}</p>
+                    <p  className="text-onBackground"><TiTick/></p>
                   </div>
                   <div className="texts w-[87%] flex flex-col gap-[16px]">
                     <p className="title text-[16px] lg:text-[28px] text-onBackground">
@@ -156,7 +157,7 @@ const Page = () => {
             ))}
           </div>
         </div>
-        <div className="Our-Core-Features top-[-250px]  relative flex flex-col gap-[32px] lg:gap-[64px] text-[24px] font-poppins items-center">
+        <div className="Our-Core-Features top-[350px] lg:top-[-250px]  relative flex flex-col gap-[32px] lg:gap-[64px] text-[24px] font-poppins items-center">
           <Image
             src={grid}
             alt="Glow"
@@ -173,7 +174,7 @@ const Page = () => {
               >
                 <div className="top flex justify-between w-full">
                   <div className="number size-[30px] lg:size-[40px]  rounded-full bg-surfaceContainer flex items-center justify-center text-[16px] lg:text-[28px]">
-                    <p>{list.id}</p>
+                    <p className="text-onBackground">{<TiTick/>}</p>
                   </div>
                   <div className="texts w-[87%] flex flex-col gap-[16px]">
                     <p className="title text-[16px] lg:text-[28px] text-onBackground">
@@ -188,11 +189,11 @@ const Page = () => {
               </div>
             ))}
           </div>
-          <div className="callToAction w-[576px] text-center flex flex-col gap-[64px] mt-[128px]">
-            <p className="font-poppins text-onBackground text-[36px]">
+          <div className="callToAction lg:w-[576px] text-center flex flex-col gap-[16px] lg:gap-[64px] lg:mt-[128px] mt-[32px] lg:mb-[0px] mb-[400px] px-[8px]">
+            <p className="font-poppins text-onBackground text-[24px] lg:text-[36px]">
               Join the Movement
             </p>
-            <p className="font-roboto text-outline text-[24px]">
+            <p className="font-roboto text-outline text-[16px] lg:text-[24px]">
               Foodbank is more than just a platform — it’s a movement reshaping
               how food, finance, and trade converge in Africa. Whether you’re a
               farmer, a buyer, or a driver, there’s a place for you in our
@@ -202,7 +203,7 @@ const Page = () => {
             <Button
               label="Become a part of Foodbank today, and let's create a world where no one goes hungry."
               variant="text"
-              className="underline"
+              className="underline text-[16px] lg:text-[24px]"
             />
           </div>
         </div>

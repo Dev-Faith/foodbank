@@ -5,16 +5,20 @@ import { IoCloseOutline } from "react-icons/io5";
 import {gsap} from 'gsap';
 import { ScrollTrigger } from "gsap/all";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 interface sideMenuProps {
   links: { label: string; url: string }[];
 }
 
 
+
 const SideMenu: React.FC<sideMenuProps> = ({ links }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const menuRef = useRef<HTMLDivElement>(null);
   const scrimRef = useRef<HTMLDivElement>(null);
+  
+  const path = usePathname();
   
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -49,7 +53,7 @@ const SideMenu: React.FC<sideMenuProps> = ({ links }) => {
       <div ref = {menuRef} className="menuContent absolute top-[3rem] translate-x-[108%] right-[0rem] z-50 bg-background rounded-[20px] p-[24px] w-full ">
         <ul className="flex flex-col gap-[40px]">
           {links.map((link) => (
-           <Link href = {link.url} key = {link.label}> <li key={link.label}>{link.label}</li></Link>
+           <Link href = {link.url} key = {link.label}> <li key={link.label} className={`${link.url == path && "text-primary"}`}>{link.label}</li></Link>
           ))}
         </ul>
       </div>
