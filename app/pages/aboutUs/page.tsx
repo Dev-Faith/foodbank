@@ -105,9 +105,11 @@ const Page = () => {
               Our Mission
             </p>
             <p className="font-roboto text-outline text-[16px]  lg:text-[24px]">
-              To revolutionize access to food and essential services in Africa
-              through innovation, collaboration, and sustainable practices,
-              fostering economic empowerment and food security for all.
+              Our core purpose and mission is to provide a full range of high
+              quality, innovative, appropriate, cost effective and sustainable
+              Agro-allied food and drugs distribution solutions that satisfy the
+              needs of its clients and the communities it serves. A Nigeria
+              where affordable learning is available to all.
             </p>
           </div>
         </div>
@@ -122,9 +124,11 @@ const Page = () => {
               Our Vision
             </p>
             <p className="font-roboto text-outline text-[16px]  lg:text-[24px]">
-              To be the leading platform in Africa for food banking, trade
-              facilitation, and financial inclusion, transforming lives and
-              creating resilient communities.
+              To render world class innovative services to all our clients,
+              community and the environment which contributes towards creation
+              of prosperity and a return on investment to our members and
+              stakeholders. A Nigeria where affordable or low cost food and
+              health services is sure
             </p>
           </div>
         </div>
