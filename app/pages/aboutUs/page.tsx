@@ -101,7 +101,9 @@ const Page = () => {
             className="relative top-[100px] lg:top-[-300px] w-screen"
           />
           <div className="absolute texts lg:text-center px-[8px] lg:w-[582px] lg:self-center lg:top-[128px] top-[85px] flex flex-col gap-[16px] lg:gap-[24px] ">
-            <p className="font-poppins text-[24px] lg:text-[32px]">Our Mission</p>
+            <p className="font-poppins text-[24px] lg:text-[32px] text-onBackground">
+              Our Mission
+            </p>
             <p className="font-roboto text-outline text-[16px]  lg:text-[24px]">
               To revolutionize access to food and essential services in Africa
               through innovation, collaboration, and sustainable practices,
@@ -116,7 +118,9 @@ const Page = () => {
             className="relative top-[-250px] lg:top-[-200px] w-screen"
           />
           <div className="absolute texts lg:text-center lg:w-[582px] px-[8px] lg:self-center lg:top-[-128px] top-[-300px] flex flex-col gap-[16px] lg:gap-[24px] ">
-            <p className="font-poppins text-[24px] lg:text-[32px]">Our Vision</p>
+            <p className="font-poppins text-[24px] lg:text-[32px] text-onBackground">
+              Our Vision
+            </p>
             <p className="font-roboto text-outline text-[16px]  lg:text-[24px]">
               To be the leading platform in Africa for food banking, trade
               facilitation, and financial inclusion, transforming lives and
@@ -141,7 +145,9 @@ const Page = () => {
               >
                 <div className="top flex justify-between w-full">
                   <div className="number size-[30px] lg:size-[40px]  rounded-full bg-surfaceContainer flex items-center justify-center text-[16px] lg:text-[28px]">
-                    <p  className="text-onBackground"><TiTick/></p>
+                    <p className="text-onBackground">
+                      <TiTick />
+                    </p>
                   </div>
                   <div className="texts w-[87%] flex flex-col gap-[16px]">
                     <p className="title text-[16px] lg:text-[28px] text-onBackground">
@@ -174,7 +180,7 @@ const Page = () => {
               >
                 <div className="top flex justify-between w-full">
                   <div className="number size-[30px] lg:size-[40px]  rounded-full bg-surfaceContainer flex items-center justify-center text-[16px] lg:text-[28px]">
-                    <p className="text-onBackground">{<TiTick/>}</p>
+                    <p className="text-onBackground">{<TiTick />}</p>
                   </div>
                   <div className="texts w-[87%] flex flex-col gap-[16px]">
                     <p className="title text-[16px] lg:text-[28px] text-onBackground">
