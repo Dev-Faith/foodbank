@@ -100,7 +100,9 @@ const Page = () => {
             className="relative top-[-300px] w-screen"
           />
           <div className="absolute texts text-center w-[582px] self-center top-[128px] flex flex-col gap-[24px] ">
-            <p className="font-poppins text-[32px]">Our Mission</p>
+            <p className="font-poppins text-[32px] text-onBackground">
+              Our Mission
+            </p>
             <p className="font-roboto text-outline text-[24px]">
               To revolutionize access to food and essential services in Africa
               through innovation, collaboration, and sustainable practices,
@@ -115,7 +117,9 @@ const Page = () => {
             className="relative top-[-200px] w-screen"
           />
           <div className="absolute texts text-center w-[582px] self-center top-[-128px] flex flex-col gap-[24px] ">
-            <p className="font-poppins text-[32px]">Our Vision</p>
+            <p className="font-poppins text-[32px] text-onBackground ">
+              Our Vision
+            </p>
             <p className="font-roboto text-outline text-[24px]">
               To be the leading platform in Africa for food banking, trade
               facilitation, and financial inclusion, transforming lives and
