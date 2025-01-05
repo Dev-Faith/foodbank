@@ -3,6 +3,8 @@ import React from "react";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import { LuFacebook } from "react-icons/lu";
 import { RiTwitterXFill } from "react-icons/ri";
+import { FiYoutube } from "react-icons/fi";
+import { LiaTelegram } from "react-icons/lia";
 import { glow } from "@/app/assets";
 import Image from "next/image";
 
@@ -21,19 +23,28 @@ const Footer = () => {
       value: "support@foodbank.com",
     },
     {
-      label: "Phone",
-      value: "+234 123 456 7890",
+      label: "Phone 1",
+      value: "+234 9074779624",
+    },
+    {
+      label: "Phone 2",
+      value: "+234 7065470056",
+    },
+    {
+      label: "Office Address",
+      value: " Suite D7 Othni Plaza Nouakchott Street Wuse I, Abuja",
     },
   ];
   const iconLinks = [
-    { label: "Facebook", url: "/#", icon: <LuFacebook size="33" /> },
-    { label: "Twitter", url: "/#", icon: <RiTwitterXFill size="33" /> },
-    { label: "Instagram", url: "/#", icon: <FaInstagram size="33" /> },
+    { label: "Facebook", url: "https://www.facebook.com/share/WAwEoQqdyP9Mcbos/", icon: <LuFacebook size="33" /> },
+    { label: "Twitter", url: "https://x.com/BobkaB25672?t=UyupXBe1SuLCuLsIyvCRGQ&s=09", icon: <RiTwitterXFill size="33" /> },
+    { label: "Youtube", url: "https://youtube.com/@foodbanknigeria?si=6J4RjA995gQr7ZMx", icon: <FiYoutube size="33" /> },
+    { label: "Telegram", url: "https://t.me/Bobkazfood", icon: <LiaTelegram size="33" /> },
   ];
 
   return (
     <footer className="bg-surfaceContainer pt-[24px] flex flex-col relative lg:items-center lg:justify-center">
-      <div className="mainContent flex flex-col gap-[32px] pb-[64px] border-b-[1px] border-outlineVariant lg:items-center lg:w-full lg:py-[128px]">
+      <div className="mainContent flex flex-col gap-[32px] lg:gap-[64px] pb-[64px] border-b-[1px] border-outlineVariant lg:items-center lg:w-full lg:py-[128px]">
         <ul className="links flex flex-col lg:flex-row lg:text-center gap-[16px] px-[8px]">
           {links.map((link) => (
             <Link href={link.url} key={link.label}>
@@ -46,7 +57,7 @@ const Footer = () => {
             </Link>
           ))}
         </ul>
-        <div className="contacts px-[8px] lg:flex gap-[32px]">
+        <div className="contacts px-[8px] gap-[32px] lg:grid grid-cols-2 lg:justify-center lg:gap-[24px]">
           {contacts.map((contact) => (
             <div key={contact.label} className="flex gap-[8px]">
               <p className="font-roboto text-[16px] text-onSurface">
