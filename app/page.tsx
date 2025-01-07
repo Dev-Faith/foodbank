@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import {
   heroImg,
@@ -15,7 +16,11 @@ import Navbar from "./components/layout/Navbar";
 import Button from "./components/ui/Button";
 import { MdOutlineArrowOutward } from "react-icons/md";
 import Footer from "./components/layout/Footer";
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
+import { FaPlay } from "react-icons/fa";
+import { FaPause } from "react-icons/fa6";
+import { gsap } from "gsap";
+
 export default function Home() {
   const imageLinks = [
     {
@@ -30,6 +35,13 @@ export default function Home() {
       img: ladySup,
     },
   ];
+
+  const playAudio = () => {
+    const audio = new Audio("./assets/foodwave.wav");
+    clicked ? audio.pause() : audio.play();
+    setClicked(!clicked);
+    audio.loop = true;
+  };
 
   const howItWorks = [
     {
@@ -72,8 +84,32 @@ export default function Home() {
     },
   ];
 
+  const [clicked, setClicked] = useState(false);
+
+  const elementRef = useRef(null);
+
+  useEffect(() => {
+    const el = elementRef.current;
+
+    // Create a yoyo animation
+    gsap.to(el, {
+      y: 30, // Move the element down by 30px
+      duration: 2, // Duration of one cycle (up or down)
+      ease: "power1.inOut", // Smooth easing for a gentle effect
+      repeat: -1, // Infinite repeat
+      yoyo: true, // YoYo effect (reverse animation)
+      repeatDelay: 0.5, // Pause for 0.5 seconds at each end
+    });
+  }, []);
   return (
     <div className="text-onBackground flex flex-col gap-[64px] overflow-hidden relative">
+      <div
+        onClick={playAudio}
+        ref={elementRef}
+        className="play absolute z-50 lg:top-[500px] top-[350px] lg:left-[610px] left-[340px] bg-background p-[8px] size-[50px] text-[24px] flex items-center justify-center rounded-full cursor-pointer text-primary border-primary border-[1px]"
+      >
+        {clicked ? <FaPause /> : <FaPlay />}
+      </div>
       <Navbar />
       <div className="relative landingPage flex flex-col gap-[64px] lg:gap-[128px] p-[8px] lg:px-[64px] lg:mt-[150px] mt-[120px]">
         <div className=" relative hero flex flex-col lg:grid lg:justify-items-center lg:grid-cols-2 lg:justify-between  gap-[32px]">
@@ -142,7 +178,9 @@ export default function Home() {
               <span className="text-primary"> Buyers</span> nationwide. Our
               mission is to simplify agricultural trade, ensure secure{" "}
               <span className="text-primary">deliveries</span>, and offer
-              flexible payment methods, making  <span className="text-primary">food</span> and even  <span className="text-primary">drug</span> distribution in Nigeria
+              flexible payment methods, making{" "}
+              <span className="text-primary">food</span> and even{" "}
+              <span className="text-primary">drug</span> distribution in Nigeria
               seamless and fair for everyone.
             </p>
           </div>
@@ -257,7 +295,7 @@ export default function Home() {
           <div className="buttons grid grid-cols-2 lg:grid-cols-3 lg:items-center gap-[8px] text-[14px]">
             <Button label="Start Buying Now" />
             <Button label="Join As a Farmer" variant="outline" />
-            <Button label="Become a Driver" variant="text"/>
+            <Button label="Become a Driver" variant="text" />
           </div>
         </div>
       </div>
