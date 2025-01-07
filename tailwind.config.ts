@@ -1,20 +1,19 @@
-const plugin = require('tailwindcss/plugin');
-const fs = require('fs');
-const path = require('path');
+const plugin = require("tailwindcss/plugin");
+const fs = require("fs");
+const path = require("path");
 
 // Load the material theme JSON file
 const themeJson = JSON.parse(
-  fs.readFileSync(path.join(__dirname, 'app', 'material-theme.json'), 'utf8')
+  fs.readFileSync(path.join(__dirname, "app", "material-theme.json"), "utf8")
 );
 
-
 module.exports = {
-  darkMode: 'class', // Enable dark mode using a class
+  darkMode: "class", // Enable dark mode using a class
   content: [
-    './app/**/*.{js,ts,jsx,tsx}', // Include all App Router files
-    './components/**/*.{js,ts,jsx,tsx}', // Include all components
-    './features/**/*.{js,ts,jsx,tsx}', // Include feature-specific components
-    './pages/**/*.{js,ts,jsx,tsx}', // Fallback for any legacy pages if used
+    "./app/**/*.{js,ts,jsx,tsx}", // Include all App Router files
+    "./components/**/*.{js,ts,jsx,tsx}", // Include all components
+    "./features/**/*.{js,ts,jsx,tsx}", // Include feature-specific components
+    "./pages/**/*.{js,ts,jsx,tsx}", // Fallback for any legacy pages if used
   ],
   theme: {
     extend: {
@@ -38,34 +37,34 @@ module.exports = {
         scrim: themeJson.schemes.light.scrim,
 
         // Dark mode colors (flattened with `dark-` prefix)
-        'dark-primary': themeJson.schemes.dark.primary,
-        'dark-onPrimary': themeJson.schemes.dark.onPrimary,
-        'dark-primaryContainer': themeJson.schemes.dark.primaryContainer,
-        'dark-onPrimaryContainer': themeJson.schemes.dark.onPrimaryContainer,
-        'dark-tertiary': themeJson.schemes.light.tertiary,
-        'dark-background': themeJson.schemes.dark.background,
-        'dark-onBackground': themeJson.schemes.dark.onBackground,
-        'dark-surface': themeJson.schemes.dark.surface,
-        'dark-surfaceContainer': themeJson.schemes.dark.surfaceContainer,
-        'dark-surfaceContainerLow': themeJson.schemes.dark.surfaceContainerLow,
-        'dark-onSurface': themeJson.schemes.dark.onSurface,
-        'dark-outline': themeJson.schemes.dark.outline,
-        'dark-outlineVariant': themeJson.schemes.dark.outlineVariant,
-        'dark-error': themeJson.schemes.dark.error,
-        'dark-onError': themeJson.schemes.dark.onError,
-        'dark-scrim': themeJson.schemes.dark.scrim,
+        "dark-primary": themeJson.schemes.dark.primary,
+        "dark-onPrimary": themeJson.schemes.dark.onPrimary,
+        "dark-primaryContainer": themeJson.schemes.dark.primaryContainer,
+        "dark-onPrimaryContainer": themeJson.schemes.dark.onPrimaryContainer,
+        "dark-tertiary": themeJson.schemes.light.tertiary,
+        "dark-background": themeJson.schemes.dark.background,
+        "dark-onBackground": themeJson.schemes.dark.onBackground,
+        "dark-surface": themeJson.schemes.dark.surface,
+        "dark-surfaceContainer": themeJson.schemes.dark.surfaceContainer,
+        "dark-surfaceContainerLow": themeJson.schemes.dark.surfaceContainerLow,
+        "dark-onSurface": themeJson.schemes.dark.onSurface,
+        "dark-outline": themeJson.schemes.dark.outline,
+        "dark-outlineVariant": themeJson.schemes.dark.outlineVariant,
+        "dark-error": themeJson.schemes.dark.error,
+        "dark-onError": themeJson.schemes.dark.onError,
+        "dark-scrim": themeJson.schemes.dark.scrim,
       },
       fontFamily: {
-        poppins: ['var(--font-poppins)', 'sans-serif'], // Use the CSS variable
-        roboto: ['var(--font-roboto)', 'sans-serif'],
+        poppins: ["var(--font-poppins)", "sans-serif"], // Use the CSS variable
+        roboto: ["var(--font-roboto)", "sans-serif"],
       },
     },
   },
   plugins: [
-    plugin(function({ addUtilities }:{ addUtilities: Function }) {
+    plugin(function ({ addUtilities }: { addUtilities: Function }) {
       addUtilities({
-        '.content-auto': {
-          contentVisibility: 'auto',
+        ".content-auto": {
+          contentVisibility: "auto",
         },
       });
     }),

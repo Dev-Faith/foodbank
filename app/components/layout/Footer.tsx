@@ -12,7 +12,7 @@ const Footer = () => {
   const links = [
     { label: "About Us", url: "/pages/aboutUs" },
     { label: "Contact Us", url: "/#" },
-    { label: "FAQs", url: "/faqs" },
+    { label: "FAQs", url: "/pages/FAQ" },
     { label: "Privacy Policy", url: "/#" },
     { label: "Terms & Conditions", url: "/#" },
   ];
@@ -20,7 +20,7 @@ const Footer = () => {
   const contacts = [
     {
       label: "Email",
-      value: "support@foodbank.com",
+      value: "surefoodbanking@gmail.com",
     },
     {
       label: "Phone 1",

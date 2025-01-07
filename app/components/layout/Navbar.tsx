@@ -17,7 +17,7 @@ const Navbar = () => {
   const links = [
     { label: "About Us", url: "/pages/aboutUs" },
     { label: "Contact Us", url: "/#" },
-    { label: "FAQs", url: "/#" },
+    { label: "FAQs", url: "/pages/FAQ" },
     { label: "Privacy Policy", url: "/#" },
     { label: "Terms & Conditions", url: "/#" },
   ];
