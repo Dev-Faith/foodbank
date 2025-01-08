@@ -71,8 +71,8 @@ const Page = () => {
     <div className="min-h-screen flex flex-col overflow-hidden">
       <Navbar />
       <div className="flex-grow">
-        <div className="welcome flex lg:flex-row flex-col items-center gap-[64px] p-[8px] lg:px-[64px] lg:mt-[150px] mt-[120px]">
-          <div className="texts flex flex-col gap-[16px]">
+        <div className="welcome flex flex-col items-center gap-[64px] p-[8px] lg:px-[64px] lg:mt-[150px] mt-[120px]">
+          <div className="texts flex flex-col gap-[16px] lg:text-center">
             <p className="font-poppins text-[24px] lg:text-[32px] text-onBackground">
               Welcome to Foodbank
             </p>

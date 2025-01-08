@@ -38,9 +38,10 @@ export default function Home() {
 
   const playAudio = () => {
     const audio = new Audio("./assets/foodwave.wav");
-    clicked ? audio.pause() : audio.play();
+    // clicked ? audio.pause() : audio.play();
     setClicked(!clicked);
     audio.loop = true;
+    toggleAudio();
   };
 
   const howItWorks = [
@@ -88,6 +89,24 @@ export default function Home() {
 
   const elementRef = useRef(null);
 
+  const audioRef = useRef(null); // Reference to the audio element
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const toggleAudio = () => {
+    if (!audioRef.current) return;
+
+    if (isPlaying) {
+      console.log(audioRef.current);
+      audioRef.current.pause(); // Pause the audio
+    } else {
+      audioRef.current.loop = true; // Ensure looping
+      audioRef.current.play().catch((error) => {
+        console.error("Audio playback failed:", error);
+      });
+    }
+    setIsPlaying(!isPlaying); // Toggle play/pause state
+  };
+
   useEffect(() => {
     const el = elementRef.current;
 
@@ -103,6 +122,8 @@ export default function Home() {
   }, []);
   return (
     <div className="text-onBackground flex flex-col gap-[64px] overflow-hidden relative">
+      {/* Audio element */}
+      <audio ref={audioRef} src="/audio.mp3" preload="auto" />
       <div
         onClick={playAudio}
         ref={elementRef}
