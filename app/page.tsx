@@ -89,7 +89,7 @@ export default function Home() {
 
   const elementRef = useRef(null);
 
-  const audioRef = useRef(null); // Reference to the audio element
+  const audioRef = useRef<HTMLAudioElement | null>(null); // Reference to the audio element
   const [isPlaying, setIsPlaying] = useState(false);
 
   const toggleAudio = () => {
