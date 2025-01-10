@@ -122,6 +122,21 @@ export default function Home() {
       repeatDelay: 0.5, // Pause for 0.5 seconds at each end
     });
   }, []);
+
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+
+  useEffect(() => {
+    // Check localStorage for PDF read status
+    const pdfRead = localStorage.getItem('pdfRead');
+    setIsPdfRead(!!pdfRead);
+    setIsLoading(false);
+  }, []);
+
+  if (isLoading) {
+    // Show a loading spinner or blank screen while checking localStorage
+    return <div className="w-screen h-screen flex items-center justify-center">Loading...</div>;
+  }
+
   return (
     <>
       {!isPdfRead && (
